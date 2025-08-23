@@ -1,7 +1,9 @@
 import pandas as pd
 
 def run_transformation():
-    data = pd.read_csv(r'..\dataset\zipco_transaction.csv')
+    import os
+    csv_path = os.path.join(os.path.dirname(__file__), 'zipco_transaction.csv')
+    data = pd.read_csv(csv_path)
     # Remove duplicates
     data.drop_duplicates(inplace=True)
 

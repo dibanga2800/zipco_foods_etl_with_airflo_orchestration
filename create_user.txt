@@ -1,0 +1,7 @@
+airflow users create \
+    --username admin \
+    --firstname David \
+    --lastname Ibanga \
+    --role Admin \
+    --email dibanga2800@gmail.com \
+    --password D030avbang@@

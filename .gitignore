@@ -1,1 +1,29 @@
 .env
+# folder to be ignored
+zipcovenv
+
+#seting up Airflow enviroment
+#wsl
+#sudo apt-get update
+#install python 3
+#sudo apt-get install python3
+#python3 -m venv zipcovenv
+#virtual enviroment activation
+
+#Installing necessary requirements
+#source ./zipcovenv/bin/activate
+#pip install azure-storage-blob
+#pip install pandas
+#pip3 install apache-airflow
+
+#https://medium.com/@maroofashraf987/installing-apache-airflow-on-linux-a-comprehensive-guide-5462b265e961
+
+#initialise Airflow: airflow db migrate
+#start Airflow server: airflow webserver
+
+
+#Start docker server
+#docker-compose -f docker-compose.yaml up
+
+
+

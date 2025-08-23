@@ -1,15 +1,14 @@
 # Zipoco Food ETL with Airflow Orchestration
 
-This repository contains an ETL (Extract, Transform, Load) pipeline project for Zipco Foods, orchestrated using Apache Airflow.
-
 ## Overview
 
-The project is designed to handle data extraction, transformation, and loading processes for Zipco Foods, leveraging Airflow for workflow orchestration. The primary language used in this repository is Jupyter Notebook, making it easy to prototype and document the ETL steps.
+The project is designed to handle data extraction, transformation, and loading processes for Zipco Foods, leveraging Airflow for workflow orchestration. The transformed data is stored in Azure Blob Storage, providing scalable and secure cloud storage.
 
 ## Features
 
-- **End-to-End ETL Pipeline:** Extracts data from various sources, transforms it for analytics or reporting, and loads it into the desired destination.
+- **End-to-End ETL Pipeline:** Extracts data from various sources, transforms it for analytics or reporting, and loads it into Azure Blob Storage.
 - **Airflow Orchestration:** Utilizes Apache Airflow to schedule, monitor, and manage ETL workflows, ensuring reliability and scalability.
+- **Azure Blob Storage Integration:** Stores the transformed data in Azure Blob Storage for further processing, analytics, or archival.
 - **Jupyter Notebook Integration:** Facilitates data exploration, visualization, and step-by-step documentation of the ETL logic.
 
 ## Getting Started
@@ -22,7 +21,8 @@ The project is designed to handle data extraction, transformation, and loading p
 
 2. **Set Up Your Environment:**
    - Install Airflow and any additional dependencies (see requirements in the notebook or workflow files).
-   - Configure Airflow connections and variables as required for your data sources and destinations.
+   - Set up your Azure credentials and configure the connection string or environment variables for Azure Blob Storage.
+   - Configure Airflow connections and variables as required for your data sources and Azure Blob destination.
 
 3. **Run the ETL Pipeline:**
    - Start the Airflow webserver and scheduler.
@@ -30,15 +30,19 @@ The project is designed to handle data extraction, transformation, and loading p
 
 ## Repository Structure
 
-- Notebooks: Contains Jupyter notebooks for ETL logic, data exploration, and documentation.
-- DAGs: Airflow DAG files for workflow orchestration.
-- Scripts: Helper scripts for data extraction, transformation, or loading (if any).
+- **Notebooks:** Contains Jupyter notebooks for ETL logic, data exploration, and documentation.
+- **DAGs:** Airflow DAG files for workflow orchestration.
+- **Scripts:** Helper scripts for data extraction, transformation, or loading (if any).
 
 ## Prerequisites
 
 - Python 3.x
+- Pandas
+- dotenv
 - Apache Airflow
 - Jupyter Notebook
+- Azure Account (with Blob Storage access)
+- Required Python packages for Azure Blob Storage (e.g., `azure-storage-blob`)
 
 ## Contributing
 
